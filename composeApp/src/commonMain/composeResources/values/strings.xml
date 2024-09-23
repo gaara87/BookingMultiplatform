@@ -1,0 +1,9 @@
+<resources>
+    <string name="workout_title_total_back">Total Back \u0026 Glutes Renewal</string>
+    <string name="workout_title_leg_foot">Leg \u0026 Foot Rejuvenation</string>
+    <string name="workout_title_upper_body">Upper Body Bliss</string>
+    <string name="workout_title_full_body">Full Body Harmony</string>
+    <string name="workout_title_deep_tissue">Deep Tissue Detox</string>
+    <string name="workout_title_head_scalp">Head \u0026 Scalp Serenity</string>
+    <string name="workout_title_prenatal">Prenatal Pampering</string>
+</resources>
