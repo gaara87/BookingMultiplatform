@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.material3.FilterChip
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -23,7 +24,12 @@ internal fun DurationSelector(
             FilterChip(
                 selected = selectedDuration == duration,
                 onClick = { onDurationSelected(duration) },
-                label = { Text("${duration.inWholeMinutes} mins") }
+                label = {
+                    Text(
+                        text = "${duration.inWholeMinutes} mins",
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
+                }
             )
         }
     }

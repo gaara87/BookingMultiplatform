@@ -5,6 +5,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.DatePicker
 import androidx.compose.material3.DatePickerDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.Text
 import androidx.compose.material3.TimeInput
@@ -36,7 +37,10 @@ fun DateSelector(
         },
         label = {
             AnimatedContent(hasNeverSelected) { target ->
-                Text(text = (if (target) "Select a" else "Change") + " date")
+                Text(
+                    text = (if (target) "Select a" else "Change") + " date",
+                    style = MaterialTheme.typography.bodyMedium,
+                )
             }
         }
     )
@@ -59,7 +63,10 @@ fun DateSelector(
                             ?.let(onDateSelected)
                     }
                 ) {
-                    Text(text = "Confirm")
+                    Text(
+                        text = "Confirm",
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
                 }
             }
         ) {

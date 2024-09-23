@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -34,7 +35,7 @@ fun BookingDetails(
 ) {
     Card(
         modifier = modifier,
-        colors = CardDefaults.elevatedCardColors(containerColor = BookingColors.White),
+        colors = CardDefaults.elevatedCardColors(containerColor = BookingColors.bg),
         elevation = CardDefaults.elevatedCardElevation(defaultElevation = 2.dp),
         shape = RoundedCornerShape(6.dp),
     ) {
@@ -97,12 +98,14 @@ private fun BookingDetailRow(
                 text = title,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
+                style = MaterialTheme.typography.bodyMedium,
             )
             Text(
                 text = subtitle,
                 color = BookingColors.subtleText,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
+                style = MaterialTheme.typography.bodyMedium,
             )
         }
     }

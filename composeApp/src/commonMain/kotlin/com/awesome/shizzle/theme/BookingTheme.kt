@@ -15,7 +15,10 @@ fun BookingTheme(
         typography = MaterialTheme.typography.copy(
             bodyMedium = MaterialTheme.typography.bodyMedium.copy(
                 fontFamily = FontFamily(Font(Res.font.Lato_Regular))
-            )
+            ),
+            titleLarge = MaterialTheme.typography.titleLarge.copy(
+                fontFamily = FontFamily(Font(Res.font.Lato_Regular))
+            ),
         ),
         content = content,
     )

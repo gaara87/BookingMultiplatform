@@ -23,6 +23,7 @@ import com.awesome.shizzle.details.reduce
 import com.awesome.shizzle.selectors.DateSelector
 import com.awesome.shizzle.selectors.DurationSelector
 import com.awesome.shizzle.selectors.MassageSelector
+import com.awesome.shizzle.theme.BookingColors
 
 @Composable
 fun BookingScreen(modifier: Modifier = Modifier) {
@@ -79,6 +80,14 @@ fun BookingScreen(modifier: Modifier = Modifier) {
                     )
                 },
                 modifier = Modifier.fillMaxWidth(),
+                textStyle = MaterialTheme.typography.bodyMedium,
+                placeholder = {
+                    Text(
+                        text = "Location Name",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = BookingColors.subtleText,
+                    )
+                }
             )
             var locationAddress by remember { mutableStateOf("") }
             TextField(
@@ -90,6 +99,14 @@ fun BookingScreen(modifier: Modifier = Modifier) {
                     )
                 },
                 modifier = Modifier.fillMaxWidth(),
+                textStyle = MaterialTheme.typography.bodyMedium,
+                placeholder = {
+                    Text(
+                        text = "Location Address",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = BookingColors.subtleText,
+                    )
+                }
             )
         }
     }

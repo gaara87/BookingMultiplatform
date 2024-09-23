@@ -3,6 +3,7 @@ package com.awesome.shizzle.selectors
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -25,7 +26,8 @@ internal fun MassageSelector(
         label = {
             AnimatedContent(hasNeverSelected) { target ->
                 Text(
-                    text = (if (target) "Select a" else "Change") + " massage type"
+                    text = (if (target) "Select a" else "Change") + " massage type",
+                    style = MaterialTheme.typography.bodyMedium,
                 )
             }
         }
@@ -41,7 +43,10 @@ internal fun MassageSelector(
                     onMassageTypeSelected(it)
                 },
                 text = {
-                    Text(stringResource(it.description))
+                    Text(
+                        text = stringResource(it.description),
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
                 },
             )
         }
